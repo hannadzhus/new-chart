@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: nginx-app
@@ -17,7 +17,7 @@ spec:
       serviceAccountName: nginx-sa
       containers:
         - name: nginx
-          image: us-central1-docker.pkg.dev/sapient-tracer-417700/chart2/docker-gc2:v1
+          image: us-central1-docker.pkg.dev/sapient-tracer-417700/app3/app-image:v2
           ports:
             - name: http
               containerPort: 80
