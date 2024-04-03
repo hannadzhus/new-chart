@@ -17,7 +17,7 @@ spec:
       serviceAccountName: nginx-sa
       containers:
         - name: nginx
-          image: us-central1-docker.pkg.dev/sapient-tracer-417700/app3/app-image:v2
+          image: us-central1-docker.pkg.dev/sapient-tracer-417700/app-chart/new-image:v1
           ports:
             - name: http
               containerPort: 80
