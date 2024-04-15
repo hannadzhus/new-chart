@@ -49,6 +49,6 @@ jobs:
        gcloud auth print-access-token | helm registry login -u oauth2accesstoken \
        --password-stdin https://us-central1-docker.pkg.dev
 
-    - name: Package and Push Helm Charts
+    - name: Push Helm Charts
       run: |
-        helm push hello-chart-0.1.0.tgz oci://us-central1-docker.pkg.dev/sapient-tracer-417700/quickstart-helm-repo
+        helm push ./packaged-charts/*.tgz oci://us-central1-docker.pkg.dev/sapient-tracer-417700/app-chart
